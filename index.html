@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>José Alvarez — Jeatream | Custom Software, CRM, Web, Apps & Networks</title>
+<meta name="description" content="José Alvarez — Jeatream. Custom software development: CRM, ERP and business management systems with Python, Django, Django REST, HTML, C#, MySQL (advanced), PostgreSQL, MongoDB, mobile apps with Flutter and native Android (Kotlin/Java), desktop with Java/PHP/.NET and networking & structured cabling. Creator of StickSprint, RetroBoy and EmuCube.">
+<meta name="author" content="José Alvarez — Jeatream">
+<meta name="theme-color" content="#262D35">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="canonical" href="https://jeatreamapps.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="José Alvarez — Jeatream | Software, CRM & Networks">
+<meta property="og:description" content="Custom software: CRM, ERP, web with Python/Django, mobile with Flutter and structured cabling networks.">
+<meta property="og:locale" content="en_US">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'slate': '#262D35',
+        'slate-dark': '#262D35',
+        'slate-light': '#D9DDE2',
+        'ibm-blue': '#0F62FE',
+        'ibm-blue-dark': '#0353C8',
+        'ibm-dark': '#262D35',
+        'ibm-border': '#D9DDE2',
+        'ibm-muted': '#5A6470',
+        'ibm-gray': '#F2F4F8',
+      },
+      fontFamily: {
+        'sans': ['IBM Plex Sans','Inter','system-ui','sans-serif'],
+        'mono': ['IBM Plex Mono','monospace'],
+      },
+      borderRadius: { 'ibm': '8px' }
+    }
+  }
+}
+</script>
+<style>
+  *{scrollbar-width:thin;scrollbar-color:#262D35 #FFFFFF}
+  html{scroll-behavior:smooth}
+  .header-scrolled{backdrop-filter: blur(10px); background: rgba(255,255,255,0.96); border-bottom-color:#D9DDE2}
+  #siteHeader>div:first-child{transition:height .25s ease}
+  #siteHeader.header-scrolled>div:first-child{height:64px}
+  #siteHeader .logo-img{transition:height .25s ease}
+  #siteHeader.header-scrolled .logo-img{height:44px}
+  .text-justify{ text-align: justify; hyphens: auto; }
+  .reveal{opacity:0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease}
+  .reveal.in{opacity:1; transform:none}
+  ::selection{background: rgba(15,98,254,0.18)}
+  a:focus-visible,button:focus-visible{outline:2px solid #0F62FE;outline-offset:2px;border-radius:6px}
+  .card-hover{transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+  .card-hover:hover{transform:translateY(-3px); box-shadow:0 16px 36px rgba(38,45,53,.10)}
+  .zoom-img img{transition:transform .5s ease}
+  .card-hover:hover .zoom-img img{transform:scale(1.05)}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .card-hover,.zoom-img img,#siteHeader>div:first-child,#siteHeader .logo-img{transition:none}
+    .card-hover:hover{transform:none}
+  }
+</style>
+</head>
+<body class="bg-white text-[#262D35] font-sans antialiased">
+<a href="#inicio" data-i18n="skip_link" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-ibm-dark focus:text-white focus:px-4 focus:py-2 focus:rounded-ibm focus:text-[13px]">Skip to content</a>
+
+<!-- Top bar -->
+<div class="hidden md:block bg-[#262D35] text-white/60 font-mono text-[11px] tracking-widest py-[7px]">
+  <div class="max-w-[1220px] mx-auto px-6 flex justify-between items-center">
+    <span>JEATREAM — JOSÉ ALVAREZ</span>
+    <span data-i18n="top_verified" class="text-[#D9DDE2]">● VERIFIED GOOGLE PLAY DEVELOPER</span>
+  </div>
+</div>
+
+<header id="siteHeader" class="sticky top-0 z-40 bg-white border-b border-transparent transition-all">
+  <div class="max-w-[1220px] mx-auto px-6 h-[88px] flex items-center justify-between gap-8">
+    <a href="#inicio" class="flex items-center gap-3 shrink-0">
+      <img src="images/logo.png" alt="Jeatream" class="logo-img h-[72px] w-auto object-contain">
+    </a>
+    <nav id="siteNav" class="hidden lg:flex items-center gap-8">
+      <a href="#inicio" data-nav data-i18n="nav_home" class="text-[13px] tracking-wide font-medium text-ibm-blue transition-colors">Home</a>
+      <a href="#apps" data-nav data-i18n="nav_projects" class="text-[13px] tracking-wide font-medium text-ibm-muted hover:text-[#262D35] transition-colors">My Projects</a>
+      <a href="#sobre" data-nav data-i18n="nav_about" class="text-[13px] tracking-wide font-medium text-ibm-muted hover:text-[#262D35] transition-colors">About</a>
+      <a href="#contacto" data-nav data-i18n="nav_contact" class="text-[13px] tracking-wide font-medium text-ibm-muted hover:text-[#262D35] transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:flex items-center rounded-ibm border border-ibm-border overflow-hidden" role="group" aria-label="Language" data-i18n-aria="aria_lang">
+        <button data-lang="en" class="lang-btn px-3 py-1.5 text-[11px] font-mono font-medium bg-[#262D35] text-white" aria-pressed="true">EN</button>
+        <button data-lang="es" class="lang-btn px-3 py-1.5 text-[11px] font-mono font-medium text-[#262D35] hover:bg-[#D9DDE2]" aria-pressed="false">ES</button>
+      </div>
+      <a href="#contacto" data-i18n="cta_quote" class="hidden md:inline-flex items-center gap-2 bg-ibm-blue text-white text-[13px] font-medium px-5 py-2.5 rounded-ibm hover:bg-ibm-blue-dark transition">Get a quote →</a>
+      <button id="navToggle" class="lg:hidden w-10 h-10 grid place-items-center border border-ibm-border rounded-ibm" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu" data-i18n-aria="aria_menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileNav" class="lg:hidden hidden border-t border-ibm-border bg-white">
+    <nav class="px-6 py-4 grid gap-1 text-[14px]">
+      <a href="#inicio" class="py-3 border-b border-ibm-border" data-i18n="nav_home">Home</a>
+      <a href="#apps" class="py-3 border-b border-ibm-border" data-i18n="nav_projects">My Projects</a>
+      <a href="#sobre" class="py-3 border-b border-ibm-border" data-i18n="nav_about">About</a>
+      <a href="#contacto" class="py-3" data-i18n="nav_contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO — editorial, sin decoración IA -->
+<section id="inicio" class="bg-white border-b border-ibm-border">
+  <div class="max-w-[1220px] mx-auto px-6">
+    <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-10 items-center py-14 lg:py-20">
+      <div class="reveal">
+        <div class="flex items-center gap-3 font-mono text-[11px] tracking-[0.18em] text-ibm-muted" data-i18n="hero_available"><span class="h-px w-8 bg-ibm-blue"></span> AVAILABLE FOR NEW PROJECTS</div>
+        <h1 data-i18n="hero_h1" class="mt-6 font-sans font-bold text-[34px] sm:text-[42px] lg:text-[48px] leading-[0.95] tracking-[-0.03em]">
+          Custom Software<br>
+          <span class="text-ibm-blue">Development</span><br>
+          <span class="font-light text-[#262D35]">CRM · Web · Apps · Networks</span>
+        </h1>
+        <p data-i18n="hero_p" class="mt-6 text-[15.5px] leading-[1.7] text-[#262D35] max-w-[560px] text-justify">
+          I master <strong class="text-[#262D35]">Python, HTML and C#</strong>, with knowledge in <strong class="text-[#262D35]">Java and PHP</strong>. I work with <strong class="text-[#262D35]">Django & Django REST Framework</strong>, <strong class="text-[#262D35]">Flutter</strong> and <strong class="text-[#262D35]">native Android (Kotlin/Java, Android Studio, Jetpack)</strong>, plus <strong class="text-[#262D35]">desktop apps with C#/.NET, Java & PHP</strong>. I build <strong class="text-[#262D35]">CRMs, ERPs and management systems</strong> with <strong class="text-[#262D35]">MySQL (advanced), PostgreSQL and MongoDB</strong> and also provide <strong class="text-[#262D35]">networking, structured cabling & infrastructure</strong>.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#apps" data-i18n="hero_btn_projects" class="inline-flex items-center gap-2 bg-ibm-blue text-white text-[14px] font-medium px-6 py-3 rounded-ibm hover:bg-ibm-blue-dark transition">View projects →</a>
+          <a href="#sobre" data-i18n="hero_btn_about" class="inline-flex items-center gap-2 bg-white border border-ibm-border text-[14px] font-medium px-6 py-3 rounded-ibm hover:border-ibm-blue hover:text-ibm-blue transition">About</a>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] tracking-wide text-ibm-muted border-t border-ibm-border pt-6 max-w-[560px]">
+          <span>PYTHON · DJANGO · C#</span><span class="opacity-30">·</span><span>FLUTTER · ANDROID</span><span class="opacity-30">·</span><span>MYSQL · POSTGRE · MONGO</span><span class="opacity-30">·</span><span>NETWORKS · CABLING</span>
+        </div>
+        <div class="mt-8 grid grid-cols-3 gap-8 max-w-[420px]">
+          <div><div class="font-bold text-[26px] leading-none tracking-tight">10+</div><div data-i18n="stats_systems" class="font-mono text-[11px] tracking-widest text-ibm-muted mt-1.5">SYSTEMS DELIVERED</div></div>
+          <div><div class="font-bold text-[26px] leading-none tracking-tight">10+</div><div data-i18n="stats_tech" class="font-mono text-[11px] tracking-widest text-ibm-muted mt-1.5">TECHNOLOGIES</div></div>
+          <div><div class="font-bold text-[26px] leading-none tracking-tight">3</div><div data-i18n="stats_apps" class="font-mono text-[11px] tracking-widest text-ibm-muted mt-1.5">APPS ON PLAY STORE</div></div>
+        </div>
+      </div>
+
+      <!-- Visual consola tipo Mac — restaurada -->
+      <div class="reveal lg:pl-2" style="transition-delay:.08s">
+        <div class="relative bg-[#262D35] rounded-[12px] overflow-hidden border border-[#262D35] shadow-[0_24px_64px_rgba(38,45,53,0.18)]">
+          <div class="flex items-center justify-between px-4 py-3 bg-[#262D35] border-b border-white/10">
+            <div class="flex gap-1.5"><span class="w-3 h-3 rounded-full bg-[#FF5F57]"></span><span class="w-3 h-3 rounded-full bg-[#FEBC2E]"></span><span class="w-3 h-3 rounded-full bg-[#28C840]"></span></div>
+            <span class="font-mono text-[11px] tracking-[0.14em] text-white/70"><span data-i18n="visual_featured">FEATURED PROJECTS</span></span>
+            <span data-i18n="visual_status" class="font-mono text-[10px] text-[#42BE65]">● ACTIVE</span>
+          </div>
+          <div class="p-5 grid grid-cols-2 gap-4 bg-[#262D35]">
+            <div class="bg-[#FFFFFF] border border-[#D9DDE2] rounded-ibm overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&auto=format&fit=crop" alt="CRM dashboard" class="h-[140px] w-full object-cover">
+              <div class="p-3">
+                <div class="font-mono text-[10px] tracking-widest text-[#262D35]/60">CRM · DJANGO REST</div>
+                <div data-i18n="visual_crm_title" class="font-semibold text-[13px] mt-0.5 text-[#262D35]">Business CRM</div>
+                <div class="font-mono text-[11px] text-[#262D35]/60">PostgreSQL · Roles</div>
+              </div>
+            </div>
+            <div class="grid gap-4">
+              <div class="bg-[#FFFFFF] border border-[#D9DDE2] rounded-ibm p-3 flex gap-3 items-center">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7dfb?w=200&q=80&auto=format&fit=crop" class="w-12 h-12 rounded object-cover border border-[#D9DDE2]" alt="">
+                <div><div data-i18n="visual_mobile_title" class="font-semibold text-[13px] leading-none text-[#262D35]">Mobile Apps</div><div class="font-mono text-[11px] text-[#262D35]/60 mt-1">Flutter · Android</div></div>
+              </div>
+              <div class="bg-[#FFFFFF] border border-[#D9DDE2] rounded-ibm p-3 flex gap-3 items-center">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=200&q=80&auto=format&fit=crop" class="w-12 h-12 rounded object-cover border border-[#D9DDE2]" alt="">
+                <div><div data-i18n="visual_networks_title" class="font-semibold text-[13px] leading-none text-[#262D35]">Networks</div><div class="font-mono text-[11px] text-[#262D35]/60 mt-1">Cabling · Switches</div></div>
+              </div>
+              <div class="bg-[#FFFFFF] border border-[#D9DDE2] rounded-ibm p-3">
+                <div data-i18n="visual_own_kicker" class="font-mono text-[10px] tracking-widest text-[#262D35]/50">OWN · PLAY STORE</div>
+                <div class="font-semibold text-[13px] mt-1 text-[#262D35]">StickSprint · RetroBoy · EmuCube</div>
+                <div data-i18n="visual_own_desc" class="font-mono text-[11px] text-[#262D35]/60 mt-1">Games & emulation</div>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 py-3 flex items-center justify-between font-mono text-[11px] text-white/50 border-t border-white/10 bg-[#262D35]">
+            <span><span data-i18n="visual_verified">Verified stack</span> — MySQL · Python · C# · Flutter · Android</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="apps" class="bg-ibm-gray border-b border-ibm-border py-14 lg:py-20">
+  <div class="max-w-[1220px] mx-auto px-6">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 reveal">
+      <div>
+        <div class="font-mono text-[11px] tracking-[0.16em] text-ibm-blue"><span data-i18n="section_projects">01 — PROJECTS</span></div>
+        <h2 data-i18n="projects_title" class="mt-2 font-bold text-[28px] lg:text-[32px] tracking-tight leading-none">My Projects</h2>
+        <p class="mt-3 text-[15px] leading-relaxed text-[#262D35] max-w-[620px] text-justify"><span data-i18n="projects_desc">Custom solutions for businesses and personal projects: <strong>CRMs, ERPs and management systems</strong> with Python/Django & Django REST, frontends in HTML, mobile apps with Flutter and native Android (Kotlin/Java), desktop with C#/.NET, Java & PHP, and <strong>networking with structured cabling</strong>.</span></p>
+      </div>
+      <a href="https://play.google.com/store/apps/developer?id=Jeatream+Apps" target="_blank" rel="noopener" class="text-[13px] font-medium text-ibm-blue hover:underline shrink-0">View on Google Play →</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <!-- StickSprint -->
+      <article class="card-hover bg-white border border-ibm-border rounded-[10px] overflow-hidden flex flex-col hover:border-[#9BA5B0] reveal">
+        <div class="zoom-img aspect-[16/10] overflow-hidden bg-white border-b border-ibm-border"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80&auto=format&fit=crop" alt="StickSprint game" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+        <div class="p-5 flex flex-col flex-1">
+          <div data-i18n="card_sticksprint_kicker" class="font-mono text-[11px] tracking-widest text-ibm-blue">GAME · ANDROID</div>
+          <h3 class="font-bold text-[16px] mt-1">StickSprint</h3>
+          <p data-i18n="card_sticksprint_sub" class="font-mono text-[11px] tracking-widest text-ibm-muted">RUNNER · PHYSICS · 60 FPS</p>
+          <p data-i18n="project_sticksprint_desc" class="mt-3 text-[13.5px] leading-relaxed text-[#262D35] text-justify">Runner with ragdoll physics, 13 obstacle types and 62 cosmetics. Campaign, endless and 1v3. Offline-first, no pay-to-win.</p>
+          <div class="mt-4 flex gap-1.5 font-mono text-[10px]"><span class="px-2 py-1 bg-ibm-gray border border-ibm-border rounded">KOTLIN</span><span class="px-2 py-1 bg-ibm-gray border border-ibm-border rounded">60 FPS</span></div>
+          <a href="https://play.google.com/store/apps/details?id=com.sticksprint.game" target="_blank" rel="noopener" data-i18n="btn_view_play" class="mt-5 inline-flex justify-center bg-ibm-blue text-white text-[13px] font-medium py-2.5 rounded-ibm hover:bg-ibm-blue-dark transition">View on Google Play</a>
+        </div>
+      </article>
+      <!-- RetroBoy -->
+      <article class="card-hover bg-white border border-ibm-border rounded-[10px] overflow-hidden flex flex-col hover:border-[#9BA5B0] transition reveal" style="transition-delay:.05s">
+        <div class="zoom-img aspect-[16/10] overflow-hidden bg-white border-b border-ibm-border"><img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&q=80&auto=format&fit=crop" alt="RetroBoy emulator" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+        <div class="p-5 flex flex-col flex-1">
+          <div data-i18n="card_retroboy_kicker" class="font-mono text-[11px] tracking-widest text-ibm-blue">EMULATOR · 8/16-BIT</div>
+          <h3 class="font-bold text-[16px] mt-1">RetroBoy</h3>
+          <p data-i18n="card_retroboy_sub" class="font-mono text-[11px] tracking-widest text-ibm-muted">PORTABLE LAUNCHER</p>
+          <p data-i18n="project_retroboy_desc" class="mt-3 text-[13.5px] leading-relaxed text-[#262D35] text-justify">Launcher for 8/16-bit ROMs with save states, rewind, CRT filters and Bluetooth gamepad.</p>
+          <div class="mt-4 flex gap-1.5 font-mono text-[10px]"><span class="px-2 py-1 bg-ibm-gray border border-ibm-border rounded">C#</span><span class="px-2 py-1 bg-ibm-gray border border-ibm-border rounded">ANDROID</span></div>
+          <a href="https://play.google.com/store/apps/details?id=com.retroboy.emulator" target="_blank" rel="noopener" data-i18n="btn_view_play" class="mt-5 inline-flex justify-center bg-ibm-blue text-white text-[13px] font-medium py-2.5 rounded-ibm hover:bg-ibm-blue-dark transition">View on Google Play</a>
+          <a href="privacidad-retroboy.html" data-i18n="footer_privacy" class="mt-2 inline-flex justify-center border border-ibm-border text-[12px] font-medium py-2 rounded-ibm hover:border-ibm-blue hover:text-ibm-blue transition">RetroBoy Privacy Policy</a>
+        </div>
+      </article>
+      <!-- EmuCube -->
+      <article class="card-hover bg-white border border-ibm-border rounded-[10px] overflow-hidden flex flex-col hover:border-[#9BA5B0] transition reveal" style="transition-delay:.1s">
+        <div class="zoom-img aspect-[16/10] overflow-hidden bg-white border-b border-ibm-border"><img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800&q=80&auto=format&fit=crop" alt="EmuCube emulator" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+        <div class="p-5 flex flex-col flex-1">
+          <div data-i18n="card_emucube_kicker" class="font-mono text-[11px] tracking-widest text-ibm-blue">EMULATOR · 3D</div>
+          <h3 class="font-bold text-[16px] mt-1">EmuCube</h3>
+          <p class="font-mono text-[11px] tracking-widest text-ibm-muted">VULKAN · 32/64-BIT</p>
+          <p data-i18n="project_emucube_desc" class="mt-3 text-[13.5px] leading-relaxed text-[#262D35] text-justify">Retro 3D platform with Vulkan/OpenGL rendering, x4 upscaling and netplay.</p>
+          <div class="mt-4 flex gap-1.5 font-mono text-[10px]"><span class="px-2 py-1 bg-ibm-gray border border-ibm-border rounded">VULKAN</span><span class="px-2 py-1 bg-ibm-dark text-white rounded">C#/.NET</span></div>
+          <a href="https://play.google.com/store/apps/details?id=com.jeatream.emucube" target="_blank" rel="noopener" data-i18n="btn_view_play" class="mt-5 inline-flex justify-center bg-ibm-blue text-white text-[13px] font-medium py-2.5 rounded-ibm hover:bg-ibm-blue-dark transition">View on Google Play</a>
+        </div>
+      </article>
+      <!-- CRM -->
+      <article class="card-hover bg-white border border-ibm-border rounded-[10px] overflow-hidden flex flex-col hover:border-[#9BA5B0] transition reveal">
+        <div class="zoom-img aspect-[16/10] overflow-hidden bg-white border-b border-ibm-border"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop" alt="Custom CRM dashboard" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+        <div class="p-5 flex flex-col flex-1">
+          <div data-i18n="card_crm_kicker" class="font-mono text-[11px] tracking-widest text-ibm-blue">ENTERPRISE · CRM</div>
+          <h3 data-i18n="project_crm_title" class="font-bold text-[16px] mt-1">Custom CRM</h3>
+          <p class="font-mono text-[11px] tracking-widest text-ibm-muted">DJANGO REST · POSTGRESQL</p>
+          <p data-i18n="project_crm_desc" class="mt-3 text-[13.5px] leading-relaxed text-[#262D35] text-justify">Client management, funnels, quotes and invoicing. Multi-user, roles and real-time reports.</p>
+          <div class="mt-4 flex gap-1.5 font-mono text-[10px]"><span class="px-2 py-1 bg-ibm-blue text-white rounded">PYTHON</span><span class="px-2 py-1 bg-ibm-gray border border-ibm-border rounded">C#</span></div>
+          <a href="#contacto" data-i18n="btn_request_demo" class="mt-5 inline-flex justify-center border border-ibm-border text-[13px] font-medium py-2.5 rounded-ibm hover:border-ibm-blue hover:text-ibm-blue transition">Request demo</a>
+        </div>
+      </article>
+      <!-- ERP -->
+      <article class="card-hover bg-white border border-ibm-border rounded-[10px] overflow-hidden flex flex-col hover:border-[#9BA5B0] transition reveal" style="transition-delay:.06s">
+        <div class="zoom-img aspect-[16/10] overflow-hidden bg-white border-b border-ibm-border"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format&fit=crop" alt="ERP management system" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+        <div class="p-5 flex flex-col flex-1">
+          <div data-i18n="card_erp_kicker" class="font-mono text-[11px] tracking-widest text-ibm-blue">ERP · MANAGEMENT</div>
+          <h3 data-i18n="project_erp_title" class="font-bold text-[16px] mt-1">Management Systems</h3>
+          <p data-i18n="card_erp_sub" class="font-mono text-[11px] tracking-widest text-ibm-muted">WEB + DESKTOP + FLUTTER</p>
+          <p data-i18n="project_erp_desc" class="mt-3 text-[13.5px] leading-relaxed text-[#262D35] text-justify">Inventory, purchasing, sales and invoicing. Web with Django/HTML, desktop C#/.NET and Flutter app.</p>
+          <div class="mt-4 flex gap-1.5 font-mono text-[10px]"><span class="px-2 py-1 bg-ibm-gray border border-ibm-border rounded">PHP · JAVA</span><span class="px-2 py-1 bg-[#262D35] text-white rounded">ERP</span></div>
+          <a href="#contacto" data-i18n="btn_get_quote" class="mt-5 inline-flex justify-center border border-ibm-border text-[13px] font-medium py-2.5 rounded-ibm hover:border-ibm-blue hover:text-ibm-blue transition">Get quote</a>
+        </div>
+      </article>
+      <!-- Redes -->
+      <article class="card-hover bg-white border border-ibm-border rounded-[10px] overflow-hidden flex flex-col hover:border-[#9BA5B0] transition reveal" style="transition-delay:.12s">
+        <div class="zoom-img aspect-[16/10] overflow-hidden bg-white border-b border-ibm-border"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&auto=format&fit=crop" alt="Network cabling infrastructure" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+        <div class="p-5 flex flex-col flex-1">
+          <div data-i18n="card_redes_kicker" class="font-mono text-[11px] tracking-widest text-ibm-blue">INFRASTRUCTURE · NETWORKS</div>
+          <h3 data-i18n="project_redes_title" class="font-bold text-[16px] mt-1">Networks & Support</h3>
+          <p data-i18n="card_redes_sub" class="font-mono text-[11px] tracking-widest text-ibm-muted">STRUCTURED CABLING</p>
+          <p data-i18n="project_redes_desc" class="mt-3 text-[13.5px] leading-relaxed text-[#262D35] text-justify">Cat5e/Cat6 cabling, racks, switches, routers and enterprise WiFi. Documented installation and support.</p>
+          <div class="mt-4 flex gap-1.5 font-mono text-[10px]"><span data-i18n="chip_networks" class="px-2 py-1 bg-ibm-dark text-white rounded">NETWORKS</span><span data-i18n="chip_cabling" class="px-2 py-1 bg-ibm-gray border border-ibm-border rounded">CABLING</span></div>
+          <a href="#contacto" data-i18n="btn_site_visit" class="mt-5 inline-flex justify-center bg-[#262D35] text-white text-[13px] font-medium py-2.5 rounded-ibm hover:bg-black transition">Request site visit</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MI -->
+<section id="sobre" class="bg-white py-14 lg:py-20 border-b border-ibm-border">
+  <div class="max-w-[1220px] mx-auto px-6">
+    <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
+      <div class="reveal">
+        <div class="font-mono text-[11px] tracking-[0.16em] text-ibm-blue"><span data-i18n="section_about">02 — ABOUT</span></div>
+        <h2 data-i18n="about_title" class="mt-2 font-bold text-[28px] lg:text-[32px] leading-none tracking-tight">About the Developer</h2>
+        <div class="mt-6 space-y-4 text-[15px] leading-relaxed text-[#262D35] text-justify">
+          <p data-i18n="about_p1">I'm <strong class="text-[#262D35]">José Alvarez</strong> — founder of <strong class="text-[#262D35]">Jeatream</strong>, a full-stack developer with an end-to-end vision: from <strong class="text-[#262D35]">enterprise systems</strong> to personal apps.</p>
+          <p data-i18n="about_p2">I master <strong class="text-[#262D35]">Python, HTML and C#</strong>, with knowledge in <strong class="text-[#262D35]">Java and PHP</strong>. I work with <strong class="text-[#262D35]">Django & Django REST Framework</strong>, <strong class="text-[#262D35]">Flutter</strong> and <strong class="text-[#262D35]">native Android (Kotlin/Java, Android Studio, Jetpack)</strong>, plus <strong class="text-[#262D35]">desktop apps with C#/.NET, Java & PHP</strong>.</p>
+          <p data-i18n="about_p3">For businesses I build <strong class="text-[#262D35]">custom CRMs, ERPs and management software</strong> and maintain my own projects like <strong class="text-[#262D35]">StickSprint, RetroBoy and EmuCube</strong>. I also provide <strong class="text-[#262D35]">networking, structured cabling and infrastructure support</strong>.</p>
+        </div>
+        <div class="mt-8 grid sm:grid-cols-2 gap-4">
+          <div class="card-hover border border-ibm-border rounded-ibm p-4 bg-ibm-gray">
+            <div data-i18n="about_tech_kicker" class="font-mono text-[11px] tracking-widest text-ibm-muted">TECH STACK</div>
+            <div data-i18n="about_tech_title" class="font-semibold text-sm mt-1">Python · Django · DRF · HTML · C# · MySQL</div>
+            <p data-i18n="about_tech_desc" class="text-[13px] text-ibm-muted leading-relaxed mt-1.5 text-justify">Robust backends, REST APIs and clean frontends. Maintainable code with .NET and C#.</p>
+          </div>
+          <div class="card-hover border border-ibm-border rounded-ibm p-4 bg-ibm-gray">
+            <div data-i18n="about_services_kicker" class="font-mono text-[11px] tracking-widest text-ibm-muted">SERVICES</div>
+            <div data-i18n="about_services_title" class="font-semibold text-sm mt-1">CRM · ERP · Management + Android</div>
+            <p data-i18n="about_services_desc" class="text-[13px] text-ibm-muted leading-relaxed mt-1.5 text-justify">Custom systems for sales and inventory. Flutter and native Android, C#/.NET and Java/PHP for desktop.</p>
+          </div>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 bg-white border border-ibm-border rounded-full font-mono text-[11px]">Python · Django · DRF · C# · MySQL</span>
+          <span class="px-3 py-1.5 bg-white border border-ibm-border rounded-full font-mono text-[11px]">Flutter · Android · Kotlin/Java · HTML</span>
+          <span class="px-3 py-1.5 bg-white border border-ibm-border rounded-full font-mono text-[11px]">MySQL · PostgreSQL · MongoDB</span>
+          <span class="px-3 py-1.5 bg-white border border-ibm-border rounded-full font-mono text-[11px]">C# · .NET · Java · PHP</span>
+        </div>
+      </div>
+      <div class="card-hover border border-ibm-border rounded-[12px] overflow-hidden bg-ibm-gray reveal" style="transition-delay:.06s">
+        <div class="px-6 py-4 bg-white border-b border-ibm-border flex items-center justify-between">
+          <span data-i18n="profile_kicker" class="font-mono text-[11px] tracking-[0.14em] text-ibm-muted">PROFILE — STACK</span>
+          <span data-i18n="profile_verified" class="font-mono text-[11px] text-ibm-blue font-medium">● VERIFIED</span>
+        </div>
+        <div class="p-6">
+          <div class="flex gap-4">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80&auto=format&fit=crop" alt="José Alvarez" loading="lazy" decoding="async" class="w-14 h-14 rounded-ibm object-cover border border-ibm-border">
+            <div><div class="font-bold text-[15px]">José Alvarez — Jeatream</div><div data-i18n="profile_role" class="font-mono text-[11px] tracking-widest text-ibm-muted mt-0.5">FULL-STACK DEVELOPER · CRM & NETWORKS</div></div>
+          </div>
+          <dl class="mt-6 space-y-0 font-mono text-[12.5px] divide-y divide-ibm-border border-y border-ibm-border">
+            <div class="flex justify-between py-3"><dt data-i18n="profile_main" class="text-ibm-muted">MAIN STACK</dt><dd class="font-medium">Python · Django · C# · MySQL</dd></div>
+            <div class="flex justify-between py-3"><dt data-i18n="profile_mobile" class="text-ibm-muted">MOBILE & DESKTOP</dt><dd class="font-medium">Flutter · Android · .NET</dd></div>
+            <div class="flex justify-between py-3"><dt data-i18n="profile_databases" class="text-ibm-muted">DATABASES</dt><dd class="font-medium">MySQL · Postgre · MongoDB</dd></div>
+            <div class="flex justify-between py-3"><dt data-i18n="profile_android" class="text-ibm-muted">ANDROID STACK</dt><dd class="font-medium">Kotlin · Java · Firebase</dd></div>
+            <div class="flex justify-between py-3"><dt data-i18n="profile_business" class="text-ibm-muted">BUSINESS</dt><dd class="font-medium">CRM · ERP</dd></div>
+            <div class="flex justify-between py-3"><dt data-i18n="profile_networks" class="text-ibm-muted">NETWORKS</dt><dd class="text-ibm-blue font-medium">Cabling · Switches</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="bg-white py-14 lg:py-16 border-b border-ibm-border">
+  <div class="max-w-[1220px] mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+      <div class="reveal">
+        <div class="font-mono text-[11px] tracking-[0.16em] text-ibm-blue"><span data-i18n="section_contact">03 — CONTACT</span></div>
+        <h2 data-i18n="contact_title" class="mt-2 font-bold text-[26px] leading-none tracking-tight">Need an app, system or network?</h2>
+        <p data-i18n="contact_p" class="mt-3 text-[15px] leading-relaxed text-[#262D35] text-justify">Need a <strong>mobile app, desktop application, CRM/ERP or management system</strong>, or a <strong>network and structured cabling installation</strong>? Tell me your idea and we’ll turn it into software. Reply within 24–48h.</p>
+        <div class="mt-6 space-y-3">
+          <a href="mailto:jeatreamapps@gmail.com" class="card-hover flex items-center gap-4 border border-ibm-border rounded-ibm p-4 hover:border-ibm-blue transition bg-ibm-gray">
+            <span class="w-10 h-10 bg-ibm-blue text-white rounded-ibm grid place-items-center shrink-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <span><span class="font-mono text-[11px] tracking-widest text-ibm-muted">EMAIL</span><span class="block font-semibold text-sm">jeatreamapps@gmail.com</span></span>
+          </a>
+          <a href="https://wa.me/593998768918" target="_blank" rel="noopener" class="card-hover flex items-center gap-4 border border-ibm-border rounded-ibm p-4 hover:border-ibm-blue transition bg-white">
+            <span class="w-10 h-10 bg-ibm-blue text-white rounded-ibm grid place-items-center shrink-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <span><span data-i18n="contact_phone_label" class="font-mono text-[11px] tracking-widest text-ibm-muted">PHONE / WHATSAPP</span><span class="block font-semibold text-sm">+593 998 768 918</span></span>
+          </a>
+        </div>
+      </div>
+      <div class="card-hover border border-ibm-border rounded-[12px] p-6 bg-ibm-gray reveal" style="transition-delay:.06s">
+        <h3 data-i18n="contact_tell" class="font-semibold text-sm">Tell me about your project:</h3>
+        <ul class="mt-3 space-y-2 text-[14px] text-[#262D35]">
+          <li data-i18n="contact_item1" class="flex gap-2"><span class="text-ibm-blue">—</span> What you need: mobile app, desktop, CRM/ERP, web or networks</li>
+          <li data-i18n="contact_item2" class="flex gap-2"><span class="text-ibm-blue">—</span> Main features and goals</li>
+          <li data-i18n="contact_item3" class="flex gap-2"><span class="text-ibm-blue">—</span> Estimated timeline and budget</li>
+        </ul>
+        <div data-i18n="contact_reply" class="mt-5 p-3 bg-white border border-ibm-border rounded-ibm font-mono text-[12px] text-ibm-muted">Reply within 24–48h (Mon–Fri) · jeatreamapps@gmail.com · +593 998 768 918</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-[#262D35] text-white">
+  <div class="max-w-[1220px] mx-auto px-6 py-10">
+    <div class="flex flex-col lg:flex-row justify-between gap-8">
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="images/logo.png" alt="Jeatream" class="h-8 w-auto bg-white rounded p-1">
+        </div>
+        <p class="mt-3 text-[13px] leading-relaxed text-white/60 max-w-[360px] text-justify"><span data-i18n="footer_desc">Custom software: CRM, ERP and management with Python/Django, web in HTML, mobile with Flutter and native Android, desktop with C#/.NET and networking with structured cabling.</span></p>
+        <div class="mt-4 flex flex-wrap gap-2 font-mono text-[10px]"><span data-i18n="footer_badge_play" class="px-2.5 py-1 bg-white/10 border border-white/10 rounded-full">VERIFIED ON GOOGLE PLAY</span><span data-i18n="footer_badge_services" class="px-2.5 py-1 bg-white/10 border border-white/10 rounded-full">CRM · ERP · NETWORKS</span></div>
+      </div>
+      <div class="grid grid-cols-2 gap-10 text-sm">
+        <div><div class="font-mono text-[11px] tracking-widest text-white/40 mb-3"><span data-i18n="footer_nav">NAVIGATION</span></div><ul class="space-y-2 text-white/60"><li><a href="#inicio" class="hover:text-white" data-i18n="nav_home">Home</a></li><li><a href="#apps" class="hover:text-white" data-i18n="nav_projects">My Projects</a></li><li><a href="#sobre" class="hover:text-white" data-i18n="nav_about">About</a></li></ul></div>
+        <div><div class="font-mono text-[11px] tracking-widest text-white/40 mb-3"><span data-i18n="footer_contact">CONTACT</span></div><ul class="space-y-2 text-white/60"><li><a href="mailto:jeatreamapps@gmail.com" class="hover:text-white">jeatreamapps@gmail.com</a></li><li><a href="tel:+593998768918" class="hover:text-white">+593 998 768 918</a></li><li><a href="https://play.google.com/store/apps/developer?id=Jeatream+Apps" target="_blank" rel="noopener" class="hover:text-white">Google Play</a></li></ul></div>
+      </div>
+    </div>
+    <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-2 font-mono text-[11px] text-white/40"><span>© 2026 Jeatream — José Alvarez.</span><span class="flex flex-wrap gap-x-4 gap-y-1"><a href="privacidad-retroboy.html" data-i18n="footer_privacy" class="hover:text-white">RetroBoy Privacy Policy</a><span data-i18n="footer_trademark">Google Play is a trademark of Google LLC.</span></span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const header=document.getElementById('siteHeader');
+  const toggle=document.getElementById('navToggle');
+  const mobile=document.getElementById('mobileNav');
+  const onScroll=()=> header.classList.toggle('header-scrolled', window.scrollY>8);
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  toggle.addEventListener('click', ()=>{
+    const open=mobile.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', !mobile.classList.contains('hidden'));
+    toggle.innerHTML= !mobile.classList.contains('hidden') ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 6L6 18M6 6l12 12"/></svg>' : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
+  });
+  mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobile.classList.add('hidden')));
+  const reveals=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>{ es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);}});},{threshold:0.12});
+    reveals.forEach(r=>io.observe(r));
+  } else reveals.forEach(r=>r.classList.add('in'));
+  const navLinks=[...document.querySelectorAll('[data-nav]')];
+  if('IntersectionObserver' in window && navLinks.length){
+    const setActive=id=>navLinks.forEach(a=>{
+      const on=a.getAttribute('href')==='#'+id;
+      a.classList.toggle('text-ibm-blue',on);
+      a.classList.toggle('text-ibm-muted',!on);
+    });
+    const spy=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) setActive(e.target.id); }),{rootMargin:'-40% 0px -55% 0px'});
+    navLinks.map(a=>document.querySelector(a.getAttribute('href'))).forEach(s=>{ if(s) spy.observe(s); });
+  }
+})();
+</script>
+
+<script>
+const translations = {
+  en: {
+    title: "José Alvarez — Jeatream | Custom Software, CRM, Web, Apps & Networks",
+    description: "José Alvarez — Jeatream. Custom software development: CRM, ERP and business management systems with Python, Django, Django REST, HTML, C#, MySQL (advanced), PostgreSQL, MongoDB, mobile apps with Flutter and native Android (Kotlin/Java), desktop with Java/PHP/.NET and networking & structured cabling. Creator of StickSprint, RetroBoy and EmuCube.",
+    og_title: "José Alvarez — Jeatream | Software, CRM & Networks",
+    og_desc: "Custom software: CRM, ERP, web with Python/Django, mobile with Flutter and structured cabling networks.",
+    nav_home: "Home",
+    nav_projects: "My Projects",
+    nav_about: "About",
+    nav_contact: "Contact",
+    cta_quote: "Get a quote →",
+    skip_link: "Skip to content",
+    aria_lang: "Language",
+    aria_menu: "Open menu",
+    top_verified: "● VERIFIED GOOGLE PLAY DEVELOPER",
+    hero_available: "<span class=\"h-px w-8 bg-ibm-blue\"></span> AVAILABLE FOR NEW PROJECTS",
+    hero_h1: "Custom Software<br><span class=\"text-ibm-blue\">Development</span><br><span class=\"font-light text-[#262D35]\">CRM · Web · Apps · Networks</span>",
+    hero_p: "I master <strong class=\"text-[#262D35]\">Python, HTML and C#</strong>, with knowledge in <strong class=\"text-[#262D35]\">Java and PHP</strong>. I work with <strong class=\"text-[#262D35]\">Django & Django REST Framework</strong>, <strong class=\"text-[#262D35]\">Flutter</strong> and <strong class=\"text-[#262D35]\">native Android (Kotlin/Java, Android Studio, Jetpack)</strong>, plus <strong class=\"text-[#262D35]\">desktop apps with C#/.NET, Java & PHP</strong>. I build <strong class=\"text-[#262D35]\">CRMs, ERPs and management systems</strong> with <strong class=\"text-[#262D35]\">MySQL (advanced), PostgreSQL and MongoDB</strong> and also provide <strong class=\"text-[#262D35]\">networking, structured cabling & infrastructure</strong>.",
+    hero_btn_projects: "View projects →",
+    hero_btn_about: "About",
+    stats_systems: "SYSTEMS DELIVERED",
+    stats_tech: "TECHNOLOGIES",
+    stats_apps: "APPS ON PLAY STORE",
+    visual_featured: "FEATURED PROJECTS",
+    visual_status: "● ACTIVE",
+    visual_crm_title: "Business CRM",
+    visual_mobile_title: "Mobile Apps",
+    visual_networks_title: "Networks",
+    visual_own_kicker: "OWN · PLAY STORE",
+    visual_own_desc: "Games & emulation",
+    visual_verified: "Verified stack",
+    section_projects: "01 — PROJECTS",
+    projects_title: "My Projects",
+    projects_desc: "Custom solutions for businesses and personal projects: <strong>CRMs, ERPs and management systems</strong> with Python/Django & Django REST, frontends in HTML, mobile apps with Flutter and native Android (Kotlin/Java), desktop with C#/.NET, Java & PHP, and <strong>networking with structured cabling</strong>.",
+    card_sticksprint_kicker: "GAME · ANDROID",
+    card_sticksprint_sub: "RUNNER · PHYSICS · 60 FPS",
+    project_sticksprint_desc: "Runner with ragdoll physics, 13 obstacle types and 62 cosmetics. Campaign, endless and 1v3. Offline-first, no pay-to-win.",
+    card_retroboy_kicker: "EMULATOR · 8/16-BIT",
+    card_retroboy_sub: "PORTABLE LAUNCHER",
+    project_retroboy_desc: "Launcher for 8/16-bit ROMs with save states, rewind, CRT filters and Bluetooth gamepad.",
+    card_emucube_kicker: "EMULATOR · 3D",
+    project_emucube_desc: "Retro 3D platform with Vulkan/OpenGL rendering, x4 upscaling and netplay.",
+    card_crm_kicker: "ENTERPRISE · CRM",
+    project_crm_title: "Custom CRM",
+    project_crm_desc: "Client management, funnels, quotes and invoicing. Multi-user, roles and real-time reports.",
+    card_erp_kicker: "ERP · MANAGEMENT",
+    card_erp_sub: "WEB + DESKTOP + FLUTTER",
+    project_erp_title: "Management Systems",
+    project_erp_desc: "Inventory, purchasing, sales and invoicing. Web with Django/HTML, desktop C#/.NET and Flutter app.",
+    card_redes_kicker: "INFRASTRUCTURE · NETWORKS",
+    card_redes_sub: "STRUCTURED CABLING",
+    chip_networks: "NETWORKS",
+    chip_cabling: "CABLING",
+    project_redes_title: "Networks & Support",
+    project_redes_desc: "Cat5e/Cat6 cabling, racks, switches, routers and enterprise WiFi. Documented installation and support.",
+    btn_view_play: "View on Google Play",
+    btn_request_demo: "Request demo",
+    btn_get_quote: "Get quote",
+    btn_site_visit: "Request site visit",
+    section_about: "02 — ABOUT",
+    about_title: "About the Developer",
+    about_p1: "I'm <strong class=\"text-[#262D35]\">José Alvarez</strong> — founder of <strong class=\"text-[#262D35]\">Jeatream</strong>, a full-stack developer with an end-to-end vision: from <strong class=\"text-[#262D35]\">enterprise systems</strong> to personal apps.",
+    about_p2: "I master <strong class=\"text-[#262D35]\">Python, HTML and C#</strong>, with knowledge in <strong class=\"text-[#262D35]\">Java and PHP</strong>. I work with <strong class=\"text-[#262D35]\">Django & Django REST Framework</strong>, <strong class=\"text-[#262D35]\">Flutter</strong> and <strong class=\"text-[#262D35]\">native Android (Kotlin/Java, Android Studio, Jetpack)</strong>, plus <strong class=\"text-[#262D35]\">desktop apps with C#/.NET, Java & PHP</strong>.",
+    about_p3: "For businesses I build <strong class=\"text-[#262D35]\">custom CRMs, ERPs and management software</strong> and maintain my own projects like <strong class=\"text-[#262D35]\">StickSprint, RetroBoy and EmuCube</strong>. I also provide <strong class=\"text-[#262D35]\">networking, structured cabling and infrastructure support</strong>.",
+    about_tech_kicker: "TECH STACK",
+    about_tech_title: "Python · Django · DRF · HTML · C# · MySQL",
+    about_tech_desc: "Robust backends, REST APIs and clean frontends. Maintainable code with .NET and C#.",
+    about_services_kicker: "SERVICES",
+    about_services_title: "CRM · ERP · Management + Android",
+    about_services_desc: "Custom systems for sales and inventory. Flutter and native Android, C#/.NET and Java/PHP for desktop.",
+    profile_kicker: "PROFILE — STACK",
+    profile_verified: "● VERIFIED",
+    profile_role: "FULL-STACK DEVELOPER · CRM & NETWORKS",
+    profile_main: "MAIN STACK",
+    profile_mobile: "MOBILE & DESKTOP",
+    profile_databases: "DATABASES",
+    profile_android: "ANDROID STACK",
+    profile_business: "BUSINESS",
+    profile_networks: "NETWORKS",
+    section_contact: "03 — CONTACT",
+    contact_title: "Need an app, system or network?",
+    contact_p: "Need a <strong>mobile app, desktop application, CRM/ERP or management system</strong>, or a <strong>network and structured cabling installation</strong>? Tell me your idea and we’ll turn it into software. Reply within 24–48h.",
+    contact_phone_label: "PHONE / WHATSAPP",
+    contact_tell: "Tell me about your project:",
+    contact_item1: "What you need: mobile app, desktop, CRM/ERP, web or networks",
+    contact_item2: "Main features and goals",
+    contact_item3: "Estimated timeline and budget",
+    contact_reply: "Reply within 24–48h (Mon–Fri) · jeatreamapps@gmail.com · +593 998 768 918",
+    footer_desc: "Custom software: CRM, ERP and management with Python/Django, web in HTML, mobile with Flutter and native Android, desktop with C#/.NET and networking with structured cabling.",
+    footer_nav: "NAVIGATION",
+    footer_contact: "CONTACT",
+    footer_badge_play: "VERIFIED ON GOOGLE PLAY",
+    footer_badge_services: "CRM · ERP · NETWORKS",
+    footer_privacy: "RetroBoy Privacy Policy",
+    footer_trademark: "Google Play is a trademark of Google LLC."
+  },
+  es: {
+    title: "José Alvarez — Jeatream | Desarrollo de Software, CRM, Web, Apps y Redes",
+    description: "José Alvarez — Jeatream. Desarrollo de software a medida: CRM, ERP y sistemas de gestión empresarial con Python, Django, Django REST, HTML, C#, MySQL (avanzado), PostgreSQL, MongoDB, apps móviles con Flutter y Android nativo (Kotlin/Java), escritorio con Java/PHP/.NET y soluciones de redes y cableado estructurado. Creador de StickSprint, RetroBoy y EmuCube.",
+    og_title: "José Alvarez — Jeatream | Software, CRM y Redes",
+    og_desc: "Desarrollo de software a medida: CRM, ERP, web con Python/Django, móvil con Flutter y redes con cableado estructurado.",
+    nav_home: "Inicio",
+    nav_projects: "Mis Proyectos",
+    nav_about: "Sobre mí",
+    nav_contact: "Contacto",
+    cta_quote: "Cotizar proyecto →",
+    skip_link: "Saltar al contenido",
+    aria_lang: "Idioma",
+    aria_menu: "Abrir menú",
+    top_verified: "● DESARROLLADOR VERIFICADO EN GOOGLE PLAY",
+    hero_available: "<span class=\"h-px w-8 bg-ibm-blue\"></span> DISPONIBLE PARA NUEVOS PROYECTOS",
+    hero_h1: "Desarrollo de software<br><span class=\"text-ibm-blue\">a medida</span><br><span class=\"font-light text-[#262D35]\">CRM · Web · Apps · Redes</span>",
+    hero_p: "Domino <strong class=\"text-[#262D35]\">Python, HTML y C#</strong>, con conocimientos en <strong class=\"text-[#262D35]\">Java y PHP</strong>. Trabajo con <strong class=\"text-[#262D35]\">Django y Django REST Framework</strong>, <strong class=\"text-[#262D35]\">Flutter</strong> y <strong class=\"text-[#262D35]\">Android nativo (Kotlin/Java, Android Studio, Jetpack)</strong>, además de aplicaciones de <strong class=\"text-[#262D35]\">escritorio con C#/.NET, Java y PHP</strong>. Desarrollo <strong class=\"text-[#262D35]\">CRMs, ERPs y sistemas de gestión</strong> con <strong class=\"text-[#262D35]\">MySQL (avanzado), PostgreSQL y MongoDB</strong> y también realizo <strong class=\"text-[#262D35]\">redes, cableado estructurado e infraestructura</strong>.",
+    hero_btn_projects: "Ver proyectos →",
+    hero_btn_about: "Sobre mí",
+    stats_systems: "SISTEMAS ENTREGADOS",
+    stats_tech: "TECNOLOGÍAS",
+    stats_apps: "APPS EN PLAY STORE",
+    visual_featured: "PROYECTOS DESTACADOS",
+    visual_status: "● ACTIVO",
+    visual_crm_title: "CRM Empresarial",
+    visual_mobile_title: "Apps Móviles",
+    visual_networks_title: "Redes",
+    visual_own_kicker: "PROPIOS · PLAY STORE",
+    visual_own_desc: "Juegos y emulación",
+    visual_verified: "Stack verificado",
+    section_projects: "01 — PROYECTOS",
+    projects_title: "Mis Proyectos",
+    projects_desc: "Soluciones a medida para empresas y proyectos propios: <strong>CRMs, ERPs y sistemas de gestión</strong> con Python/Django y Django REST, frontends en HTML, apps móviles con Flutter y Android nativo (Kotlin/Java), escritorio con C#/.NET, Java y PHP, y <strong>redes con cableado estructurado</strong>.",
+    card_sticksprint_kicker: "JUEGO · ANDROID",
+    card_sticksprint_sub: "RUNNER · FÍSICAS · 60 FPS",
+    project_sticksprint_desc: "Runner con física ragdoll, 13 tipos de obstáculos y 62 cosméticos. Campaña, infinito y 1v3. Offline-first, sin pay-to-win.",
+    card_retroboy_kicker: "EMULADOR · 8/16-BIT",
+    card_retroboy_sub: "LAUNCHER PORTÁTIL",
+    project_retroboy_desc: "Launcher para ROMs 8/16-bit con save states, rebobinado, filtros CRT y gamepad Bluetooth.",
+    card_emucube_kicker: "EMULADOR · 3D",
+    project_emucube_desc: "Plataforma 3D retro con render Vulkan/OpenGL, upscaling x4 y netplay.",
+    card_crm_kicker: "EMPRESARIAL · CRM",
+    project_crm_title: "CRM a Medida",
+    project_crm_desc: "Gestión de clientes, embudos, cotizaciones y facturación. Multiusuario, roles y reportes en tiempo real.",
+    card_erp_kicker: "ERP · GESTIÓN",
+    card_erp_sub: "WEB + ESCRITORIO + FLUTTER",
+    project_erp_title: "Sistemas de Gestión",
+    project_erp_desc: "Inventario, compras, ventas y facturación. Web con Django/HTML, escritorio C#/.NET y app Flutter.",
+    card_redes_kicker: "INFRAESTRUCTURA · REDES",
+    card_redes_sub: "CABLEADO ESTRUCTURADO",
+    chip_networks: "REDES",
+    chip_cabling: "CABLEADO",
+    project_redes_title: "Redes y Soporte",
+    project_redes_desc: "Cableado Cat5e/Cat6, racks, switches, routers y WiFi empresarial. Instalación documentada y soporte.",
+    btn_view_play: "Ver en Google Play",
+    btn_request_demo: "Solicitar demo",
+    btn_get_quote: "Cotizar sistema",
+    btn_site_visit: "Solicitar visita técnica",
+    section_about: "02 — SOBRE MÍ",
+    about_title: "Sobre el Desarrollador",
+    about_p1: "Soy <strong class=\"text-[#262D35]\">José Alvarez</strong> — fundador de <strong class=\"text-[#262D35]\">Jeatream</strong>, desarrollador de software con visión integral: desde <strong class=\"text-[#262D35]\">sistemas empresariales</strong> hasta apps propias.",
+    about_p2: "Domino <strong class=\"text-[#262D35]\">Python, HTML y C#</strong>, con conocimientos en <strong class=\"text-[#262D35]\">Java y PHP</strong>. Trabajo con <strong class=\"text-[#262D35]\">Django y Django REST Framework</strong>, <strong class=\"text-[#262D35]\">Flutter</strong> y <strong class=\"text-[#262D35]\">Android nativo (Kotlin/Java, Android Studio, Jetpack)</strong>, además de aplicaciones de <strong class=\"text-[#262D35]\">escritorio con C#/.NET, Java y PHP</strong>.",
+    about_p3: "Para empresas creo <strong class=\"text-[#262D35]\">CRMs, ERPs y programas de gestión</strong> a medida y mantengo mis propios proyectos como <strong class=\"text-[#262D35]\">StickSprint, RetroBoy y EmuCube</strong>. También brindo soluciones de <strong class=\"text-[#262D35]\">redes, cableado estructurado y soporte de infraestructura</strong>.",
+    about_tech_kicker: "TECNOLOGÍAS",
+    about_tech_title: "Python · Django · DRF · HTML · C# · MySQL",
+    about_tech_desc: "Backends robustos, APIs REST y frontends limpios. Código mantenible con .NET y C#.",
+    about_services_kicker: "SERVICIOS",
+    about_services_title: "CRM · ERP · Gestión + Android",
+    about_services_desc: "Sistemas para ventas e inventario. Flutter y Android nativo, C#/.NET y Java/PHP para escritorio.",
+    profile_kicker: "PERFIL — TECNOLOGÍAS",
+    profile_verified: "● VERIFICADO",
+    profile_role: "DESARROLLADOR FULL-STACK · CRM & REDES",
+    profile_main: "TECNOLOGÍAS PRINCIPALES",
+    profile_mobile: "MÓVIL & ESCRITORIO",
+    profile_databases: "BASES DE DATOS",
+    profile_android: "ANDROID STACK",
+    profile_business: "EMPRESARIAL",
+    profile_networks: "REDES",
+    section_contact: "03 — CONTACTO",
+    contact_title: "¿Necesitas una app, sistema o red?",
+    contact_p: "¿Necesitas una <strong>app móvil, aplicación de escritorio, CRM/ERP o sistema de gestión</strong>, o una <strong>instalación de redes y cableado estructurado</strong>? Cuéntame tu idea y la convertimos en software. Respuesta en 24–48h.",
+    contact_phone_label: "TELÉFONO / WHATSAPP",
+    contact_tell: "Cuéntame de tu proyecto:",
+    contact_item1: "Qué necesitas: app móvil, escritorio, CRM/ERP, web o redes",
+    contact_item2: "Funciones principales y objetivos",
+    contact_item3: "Plazo estimado y presupuesto",
+    contact_reply: "Respuesta en 24–48h (L–V) · jeatreamapps@gmail.com · +593 998 768 918",
+    footer_desc: "Desarrollo de software a medida: CRM, ERP y gestión con Python/Django, web en HTML, móvil con Flutter y Android nativo, escritorio con C#/.NET y redes con cableado estructurado.",
+    footer_nav: "NAVEGACIÓN",
+    footer_contact: "CONTACTO",
+    footer_badge_play: "VERIFICADO EN GOOGLE PLAY",
+    footer_badge_services: "CRM · ERP · REDES",
+    footer_privacy: "Política de Privacidad de RetroBoy",
+    footer_trademark: "Google Play es una marca registrada de Google LLC."
+  }
+};
+function setLang(lang){
+  const t = translations[lang] || translations.en;
+  document.documentElement.lang = lang;
+  document.title = t.title;
+  const md = document.querySelector('meta[name="description"]');
+  if(md) md.content = t.description;
+  const ogt = document.querySelector('meta[property="og:title"]');
+  if(ogt) ogt.content = t.og_title;
+  const ogd = document.querySelector('meta[property="og:description"]');
+  if(ogd) ogd.content = t.og_desc;
+  const ogl = document.querySelector('meta[property="og:locale"]');
+  if(ogl) ogl.content = lang === 'es' ? 'es_ES' : 'en_US';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(t[key] !== undefined){
+      if(t[key].includes('<')) el.innerHTML = t[key];
+      else el.textContent = t[key];
+    }
+  });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-aria');
+    if(t[key] !== undefined) el.setAttribute('aria-label', t[key]);
+  });
+  document.querySelectorAll('.lang-btn').forEach(b=>{
+    const isActive = b.getAttribute('data-lang') === lang;
+    b.classList.toggle('bg-[#262D35]', isActive);
+    b.classList.toggle('text-white', isActive);
+    b.classList.toggle('text-[#262D35]', !isActive);
+    b.classList.toggle('hover:bg-[#D9DDE2]', !isActive);
+    b.setAttribute('aria-pressed', isActive);
+  });
+  localStorage.setItem('lang', lang);
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+  const saved = localStorage.getItem('lang');
+  const browser = (navigator.language||'').toLowerCase().startsWith('es') ? 'es' : 'en';
+  setLang(saved || browser);
+  document.querySelectorAll('.lang-btn').forEach(b=>{
+    b.addEventListener('click', ()=> setLang(b.getAttribute('data-lang')));
+  });
+});
+</script>
+
+</body>
+</html>
