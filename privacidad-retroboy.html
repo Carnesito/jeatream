@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — RetroBoy (Emulator)</title>
-<meta name="description" content="Privacy Policy for RetroBoy (Emulator), including local game data and information processed by Google AdMob for advertising. Updated October 17, 2026.">
+<meta name="description" content="Privacy Policy for RetroBoy, including local saves, optional Google Drive sync, external backups, and Google AdMob advertising. Updated October 18, 2026.">
 <meta name="author" content="RetroBoy">
 <meta name="theme-color" content="#262D35">
 <link rel="icon" type="image/png" href="images/logo.png">
 <link rel="canonical" href="https://carnesito.github.io/jeatream/privacidad-retroboy.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Privacy Policy — RetroBoy (Emulator)">
-<meta property="og:description" content="Local game data stays on your device; Google AdMob may process advertising information when ads are requested.">
+<meta property="og:description" content="Local saves, optional Google Drive sync and external backups; Google AdMob may process advertising information.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -74,10 +74,10 @@ tailwind.config = {
     <h1 data-i18n="hero_h1" class="mt-5 font-bold text-[28px] lg:text-[36px] leading-[1.05] tracking-[-0.02em]">Privacy Policy —<br><span class="text-ibm-blue">RetroBoy (Emulator)</span></h1>
     <div class="mt-4 flex flex-wrap gap-3 font-mono text-[12px] text-ibm-muted">
       <span class="inline-flex items-center gap-1.5 bg-white border border-ibm-border px-3 py-1.5 rounded-ibm"><span class="w-1.5 h-1.5 bg-ibm-blue rounded-full"></span><span data-i18n="hero_pkg">Package: com.retroboy.emulator</span></span>
-      <span class="inline-flex items-center gap-1.5 bg-white border border-ibm-border px-3 py-1.5 rounded-ibm"><span class="w-1.5 h-1.5 bg-[#262D35] rounded-full"></span><span data-i18n="hero_updated">Last updated: October 17, 2026</span></span>
-      <span class="inline-flex items-center gap-1.5 bg-white border border-ibm-border px-3 py-1.5 rounded-ibm font-medium text-ibm-blue"><span data-i18n="hero_zero">LOCAL GAME DATA</span></span>
+      <span class="inline-flex items-center gap-1.5 bg-white border border-ibm-border px-3 py-1.5 rounded-ibm"><span class="w-1.5 h-1.5 bg-[#262D35] rounded-full"></span><span data-i18n="hero_updated">Last updated: October 18, 2026</span></span>
+      <span class="inline-flex items-center gap-1.5 bg-white border border-ibm-border px-3 py-1.5 rounded-ibm font-medium text-ibm-blue"><span data-i18n="hero_zero">LOCAL SAVES · OPTIONAL SYNC</span></span>
     </div>
-    <p data-i18n="hero_p" class="mt-6 text-[15px] leading-relaxed text-[#262D35] text-justify max-w-[720px]">This policy describes information handled by <strong>RetroBoy</strong>. Game files, saves and settings remain on your device. The app also uses Google AdMob to request ads, which may process device and advertising information as described below.</p>
+    <p data-i18n="hero_p" class="mt-6 text-[15px] leading-relaxed text-[#262D35] text-justify max-w-[720px]">This policy describes information handled by <strong>RetroBoy</strong>. Games and saves are stored on your device. You can optionally connect Google Drive to sync battery saves or select an external folder for backups. Google AdMob may process device and advertising information when ads are requested.</p>
   </div>
 </section>
 
@@ -92,6 +92,7 @@ tailwind.config = {
         <li><a href="#s2" data-toc data-i18n="index_s2" class="transition-colors hover:text-ibm-blue">2. Data collection</a></li>
         <li><a href="#s3" data-toc data-i18n="index_s3" class="transition-colors hover:text-ibm-blue">3. Local file access</a></li>
         <li><a href="#s4" data-toc data-i18n="index_s4" class="transition-colors hover:text-ibm-blue">4. Connectivity</a></li>
+        <li><a href="#sync" data-toc data-i18n="index_sync" class="transition-colors hover:text-ibm-blue">4a. Optional Google Drive sync</a></li>
         <li><a href="#s5" data-toc data-i18n="index_s5" class="transition-colors hover:text-ibm-blue">5. Advertising</a></li>
         <li><a href="#purchase" data-toc data-i18n="index_purchase" class="transition-colors hover:text-ibm-blue">5a. Optional ad removal</a></li>
         <li><a href="#s6" data-toc data-i18n="index_s6" class="transition-colors hover:text-ibm-blue">6. Device permissions</a></li>
@@ -125,13 +126,13 @@ tailwind.config = {
           <h2 data-i18n="s2_title" class="font-bold text-[18px] tracking-tight">Collection and processing of personal data</h2>
         </div>
         <div class="h-px bg-ibm-border mb-4"></div>
-        <p data-i18n="s2_intro" class="font-medium text-[#262D35]">Game files, save files and settings are processed locally. When ads are requested, Google AdMob may process personal and device-related data such as an advertising or device identifier, approximate location inferred from IP address, ad interactions and diagnostics.</p>
+        <p data-i18n="s2_intro" class="font-medium text-[#262D35]">Games, saves and settings are processed locally. If you enable Google Drive sync, battery saves and revision metadata are sent directly to your Google Account. When ads are requested, Google AdMob may process advertising or device identifiers, approximate location inferred from IP address, ad interactions and diagnostics.</p>
         <ul class="mt-4 space-y-3">
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-ibm-blue rounded-full shrink-0"></span><span class="text-justify"><span data-i18n="s2_li1"><strong>LOCAL EMULATOR DATA:</strong> ROMs, save files, save states and emulator settings stay in local device storage and are not uploaded by RetroBoy. No account, name, email address or payment details are required to use the emulator.</span></span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-ibm-blue rounded-full shrink-0"></span><span class="text-justify"><span data-i18n="s2_li2"><strong>NO ACCOUNT CREATION:</strong> No registration, login or profile creation is required to use all emulator features.</span></span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-ibm-blue rounded-full shrink-0"></span><span class="text-justify"><span data-i18n="s2_li1"><strong>EMULATOR DATA:</strong> ROMs and settings remain on your device. Battery saves are uploaded only if you connect Google Drive; quick states are included only in manual exports. ROMs are never uploaded by RetroBoy.</span></span></li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-ibm-blue rounded-full shrink-0"></span><span class="text-justify"><span data-i18n="s2_li2"><strong>OPTIONAL GOOGLE ACCOUNT:</strong> No account is required to play locally. Drive sync requires choosing and authorizing a Google Account. RetroBoy stores the selected account locally and uses Google Play services for authorization; it does not store your Google password.</span></span></li>
           <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-ibm-blue rounded-full shrink-0"></span><span class="text-justify"><span data-i18n="s2_li3"><strong>ADVERTISING DATA:</strong> Google AdMob may collect and share advertising identifiers, approximate location, ad interactions and diagnostics with Google and its advertising partners to provide and measure ads, analyze performance and prevent fraud. The developer does not receive users’ advertising profiles.</span></span></li>
         </ul>
-        <div class="mt-5 bg-ibm-gray border border-ibm-border rounded-ibm p-4 text-[13.5px] text-[#262D35] text-justify"><span data-i18n="s2_summary"><strong>In short:</strong> Emulator files and settings stay local. Google AdMob handles advertising requests and may use network-derived approximate location and advertising identifiers. RetroBoy does not create accounts.</span></div>
+        <div class="mt-5 bg-ibm-gray border border-ibm-border rounded-ibm p-4 text-[13.5px] text-[#262D35] text-justify"><span data-i18n="s2_summary">Your game progress stays local unless you enable Drive sync or export it. Drive sync communicates directly with Google, without a developer-operated server. Google AdMob handles advertising requests separately.</span></div>
       </section>
 
       <section id="s3" class="scroll-mt-24">
@@ -142,8 +143,8 @@ tailwind.config = {
         <div class="h-px bg-ibm-border mb-4"></div>
         <ul class="space-y-3">
           <li class="flex gap-3"><span class="text-ibm-blue mt-1">—</span><span class="text-justify"><span data-i18n="s3_li1">The App requires read and write access only to files and folders the user voluntarily selects via the official secure Android picker (<strong>Storage Access Framework / SAF</strong>).</span></span></li>
-          <li class="flex gap-3"><span class="text-ibm-blue mt-1">—</span><span class="text-justify"><span data-i18n="s3_li2">Game files (ROMs with extensions <code class="bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]">.gb</code> <code class="bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]">.gbc</code> <code class="bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]">.gba</code> <code class="bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]">.zip</code>), save files (<code class="bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]">.sav</code> <code class="bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]">.srm</code>) and save states are processed and stored <strong>EXCLUSIVELY locally</strong> on your device.</span></span></li>
-          <li class="flex gap-3"><span class="text-ibm-blue mt-1">—</span><span class="text-justify"><span data-i18n="s3_li3">At no time are your ROM files or saves uploaded, copied or transmitted to external servers. The user is solely responsible for owning a legal copy of any title imported.</span></span></li>
+          <li class="flex gap-3"><span class="text-ibm-blue mt-1">—</span><span class="text-justify"><span data-i18n="s3_li2">ROMs (.gb, .gbc, .gba and supported archives), battery saves (.sav) and quick states are stored locally. You can export or import saves and compatible quick states as ZIP archives. If you choose an external folder, RetroBoy writes versioned ZIP backups of battery saves there automatically; it does not automatically import changes from that folder.</span></span></li>
+          <li class="flex gap-3"><span class="text-ibm-blue mt-1">—</span><span class="text-justify"><span data-i18n="s3_li3">ROM files are never uploaded by RetroBoy. Google Drive sync, if enabled, uploads battery saves as described below. An external folder provider may upload selected backups under its own settings and policies. The user is responsible for owning a legal copy of imported titles.</span></span></li>
         </ul>
       </section>
 
@@ -153,7 +154,7 @@ tailwind.config = {
           <h2 data-i18n="s4_title" class="font-bold text-[18px] tracking-tight">Internet connectivity and third-party services</h2>
         </div>
         <div class="h-px bg-ibm-border mb-4"></div>
-        <p class="text-justify"><span data-i18n="s4_intro">The App uses the network permission (<code class="bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]">INTERNET</code>) for optional cover-art downloads and to request ads through Google AdMob. Cover-art downloads are initiated by the user. Advertising requests are made only when Google’s User Messaging Platform (UMP) indicates that ads may be requested; regional consent choices are respected where required.</span></p>
+        <p class="text-justify"><span data-i18n="s4_intro">The App uses INTERNET for optional cover-art downloads, Google Drive sync and Google AdMob ad requests. Cover-art downloads and the initial Drive connection are user initiated. Ad requests are made only when Google UMP indicates that ads may be requested; regional consent choices are respected where required.</span></p>
         <div class="mt-4 grid gap-4">
           <div class="border border-ibm-border rounded-ibm p-4 bg-ibm-gray">
             <div class="font-mono text-[11px] tracking-widest text-ibm-blue font-medium"><span data-i18n="s4_a_title">A) COVER ART DOWNLOAD (BOX ARTS)</span></div>
@@ -164,6 +165,18 @@ tailwind.config = {
             <p class="mt-2 text-justify"><span data-i18n="s4_b_p">Tapping “Report an Error or Suggestion” opens the user’s default mail client to send a voluntary message.</span></p>
           </div>
         </div>
+      </section>
+
+      <section id="sync" class="scroll-mt-24">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="w-7 h-7 bg-ibm-dark text-white rounded grid place-items-center font-mono text-[12px] font-medium">04a</span>
+          <h2 data-i18n="sync_title" class="font-bold text-[18px] tracking-tight">Optional Google Drive sync and backup retention</h2>
+        </div>
+        <div class="h-px bg-ibm-border mb-4"></div>
+        <p data-i18n="sync_p1" class="text-justify mt-3">From version 1.0.7, you can optionally connect Google Drive to sync battery saves (.sav). RetroBoy requests only <code>https://www.googleapis.com/auth/drive.appdata</code>, which permits access to its private application data space, without general access to your other Drive files. This space is managed through Google Drive’s app settings and is not a normal visible folder. No developer-operated server receives these saves.</p>
+        <p data-i18n="sync_p2" class="text-justify mt-3">The app sends battery saves and metadata needed to identify games, verify integrity and handle revisions: an identifier derived from game content, save digest, revision relationships, date and device model. Google also receives the network information needed to serve requests. ROMs and quick states are not uploaded by automatic sync. Your selected account and sync ledger remain in private local app data. These save data are not used for advertising or sold.</p>
+        <p data-i18n="sync_p3" class="text-justify mt-3">Earlier cloud revisions are retained for recovery and are not automatically deleted in this version; they use storage associated with your Google Account. Disconnecting Drive stops sync and requests revocation of access, but does not delete local or cloud saves. You can remove authorization through your Google Account controls and delete the app’s hidden data through Google Drive settings. External backups remain until you remove them from the chosen provider.</p>
+        <p data-i18n="sync_p4" class="text-justify mt-3">Imports and restores preserve previous local progress in recovery history within RetroBoy’s private app storage. Clearing app data or uninstalling removes this local history. Sync depends on connectivity, authorization, available storage and Android scheduling; check its status before switching devices. See <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google’s Privacy Policy</a> for Google’s handling of data.</p>
       </section>
 
       <section id="s5" class="scroll-mt-24">
@@ -194,7 +207,7 @@ tailwind.config = {
           <h2 data-i18n="s6_title" class="font-bold text-[18px] tracking-tight">Device permissions</h2>
         </div>
         <div class="h-px bg-ibm-border mb-4"></div>
-        <p class="text-justify"><span data-i18n="s6_intro">RetroBoy uses permissions needed for emulator operation and advertising:</span></p>
+        <p class="text-justify"><span data-i18n="s6_intro">RetroBoy uses permissions needed for emulation, optional sync and advertising:</span></p>
         <div class="mt-4 grid sm:grid-cols-3 gap-3 font-mono text-[12.5px]">
           <div class="border border-ibm-border rounded-ibm p-4 bg-ibm-gray">
             <div class="font-medium text-[#262D35]">VIBRATE</div>
@@ -206,7 +219,7 @@ tailwind.config = {
           </div>
           <div class="border border-ibm-border rounded-ibm p-4 bg-ibm-gray">
             <div class="font-medium text-[#262D35]">INTERNET / ACCESS_NETWORK_STATE</div>
-            <div class="text-ibm-muted mt-1 leading-relaxed"><span data-i18n="s6_internet">Network access for cover-art downloads and AdMob requests. Google Play services may also use the advertising identifier for ads.</span></div>
+            <div class="text-ibm-muted mt-1 leading-relaxed"><span data-i18n="s6_internet">Network access for cover-art downloads, optional Google Drive sync and AdMob. Google Play services may also use the advertising identifier for ads.</span></div>
           </div>
         </div>
       </section>
@@ -226,7 +239,7 @@ tailwind.config = {
           <h2 data-i18n="s8_title" class="font-bold text-[18px] tracking-tight">Information security</h2>
         </div>
         <div class="h-px bg-ibm-border mb-4"></div>
-        <p class="text-justify"><span data-i18n="s8_p">As all game data, settings and saves remain exclusively on the device’s local storage, their confidentiality and integrity are protected by Android’s isolation, encryption and access-control mechanisms. There is no transmission to or custody on developer servers; therefore centralized breach notification (Art. 33-34 GDPR) does not apply beyond the security of the user’s own device.</span></p>
+        <p class="text-justify"><span data-i18n="s8_p">Android isolates the app’s local files and controls access to selected documents and folders. Drive requests use HTTPS and are authorized by Google Play services. Saves are sent directly to Google rather than to a developer-operated server. Save integrity checks and recovery history help detect damaged archives and preserve progress when restoring; users should also keep independent backups.</span></p>
       </section>
 
       <section id="s9" class="scroll-mt-24">
@@ -278,14 +291,14 @@ const translations = {
     purchase_p3: "You can restore your purchase with the same Google Play account from the menu or Settings. A refund or revocation may disable ad removal after the app checks ownership again with Google Play. Clearing app data removes the local receipt but does not cancel or refund the Google Play purchase. See <a href=\"https://policies.google.com/privacy\" rel=\"noopener\" target=\"_blank\">Google’s privacy policy</a> for Google’s handling of payment data.",
 
     title: "Privacy Policy — RetroBoy (Emulator)",
-    description: "Privacy Policy for RetroBoy (Emulator), including local game data and information processed by Google AdMob for advertising. Updated October 17, 2026.",
+    description: "Privacy Policy for RetroBoy, including local saves, optional Google Drive sync, external backups, and Google AdMob advertising. Updated October 18, 2026.",
     aria_lang: "Language",
     hero_badge: "PRIVACY POLICY · RETROBOY",
     hero_h1: "Privacy Policy —<br><span class=\"text-ibm-blue\">RetroBoy (Emulator)</span>",
     hero_pkg: "Package: com.retroboy.emulator",
-    hero_updated: "Last updated: October 17, 2026",
-    hero_zero: "LOCAL GAME DATA",
-    hero_p: "This policy describes information handled by <strong>RetroBoy</strong>. Game files, saves and settings remain on your device. The app also uses Google AdMob to request ads, which may process device and advertising information as described below.",
+    hero_updated: "Last updated: October 18, 2026",
+    hero_zero: "LOCAL SAVES · OPTIONAL SYNC",
+    hero_p: "This policy describes information handled by <strong>RetroBoy</strong>. Games and saves are stored on your device. You can optionally connect Google Drive to sync battery saves or select an external folder for backups. Google AdMob may process device and advertising information when ads are requested.",
     index_title: "CONTENTS",
     index_s1: "1. General information",
     index_s2: "2. Data collection",
@@ -302,17 +315,17 @@ const translations = {
     s1_box_title: "APP INFORMATION",
     s1_pkg: "Package: <span class=\"text-[#262D35] font-medium\">com.retroboy.emulator</span>",
     s2_title: "Collection and processing of personal data",
-    s2_intro: "Game files, save files and settings are processed locally. When ads are requested, Google AdMob may process personal and device-related data such as an advertising or device identifier, approximate location inferred from IP address, ad interactions and diagnostics.",
-    s2_li1: "<strong>LOCAL EMULATOR DATA:</strong> ROMs, save files, save states and emulator settings stay in local device storage and are not uploaded by RetroBoy. No account, name, email address or payment details are required to use the emulator.",
-    s2_li2: "<strong>NO ACCOUNT CREATION:</strong> No registration, login or profile creation is required to use all emulator features.",
+    s2_intro: "Games, saves and settings are processed locally. If you enable Google Drive sync, battery saves and revision metadata are sent directly to your Google Account. When ads are requested, Google AdMob may process advertising or device identifiers, approximate location inferred from IP address, ad interactions and diagnostics.",
+    s2_li1: "<strong>EMULATOR DATA:</strong> ROMs and settings remain on your device. Battery saves are uploaded only if you connect Google Drive; quick states are included only in manual exports. ROMs are never uploaded by RetroBoy.",
+    s2_li2: "<strong>OPTIONAL GOOGLE ACCOUNT:</strong> No account is required to play locally. Drive sync requires choosing and authorizing a Google Account. RetroBoy stores the selected account locally and uses Google Play services for authorization; it does not store your Google password.",
     s2_li3: "<strong>ADVERTISING DATA:</strong> Google AdMob may collect and share advertising identifiers, approximate location, ad interactions and diagnostics with Google and its advertising partners to provide and measure ads, analyze performance and prevent fraud. The developer does not receive users’ advertising profiles.",
-    s2_summary: "<strong>In short:</strong> Emulator files and settings stay local. Google AdMob handles advertising requests and may use network-derived approximate location and advertising identifiers. RetroBoy does not create accounts.",
+    s2_summary: "Your game progress stays local unless you enable Drive sync or export it. Drive sync communicates directly with Google, without a developer-operated server. Google AdMob handles advertising requests separately.",
     s3_title: "Access to local files (ROMs and saves)",
     s3_li1: "The App requires read and write access only to files and folders the user voluntarily selects via the official secure Android picker (<strong>Storage Access Framework / SAF</strong>).",
-    s3_li2: "Game files (ROMs with extensions <code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">.gb</code> <code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">.gbc</code> <code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">.gba</code> <code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">.zip</code>), save files (<code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">.sav</code> <code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">.srm</code>) and save states are processed and stored <strong>EXCLUSIVELY locally</strong> on your device.",
-    s3_li3: "At no time are your ROM files or saves uploaded, copied or transmitted to external servers. The user is solely responsible for owning a legal copy of any title imported.",
+    s3_li2: "ROMs (.gb, .gbc, .gba and supported archives), battery saves (.sav) and quick states are stored locally. You can export or import saves and compatible quick states as ZIP archives. If you choose an external folder, RetroBoy writes versioned ZIP backups of battery saves there automatically; it does not automatically import changes from that folder.",
+    s3_li3: "ROM files are never uploaded by RetroBoy. Google Drive sync, if enabled, uploads battery saves as described below. An external folder provider may upload selected backups under its own settings and policies. The user is responsible for owning a legal copy of imported titles.",
     s4_title: "Internet connectivity and third-party services",
-    s4_intro: "The App uses the network permission (<code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">INTERNET</code>) for optional cover-art downloads and to request ads through Google AdMob. Cover-art downloads are initiated by the user. Advertising requests are made only when Google’s User Messaging Platform (UMP) indicates that ads may be requested; regional consent choices are respected where required.",
+    s4_intro: "The App uses INTERNET for optional cover-art downloads, Google Drive sync and Google AdMob ad requests. Cover-art downloads and the initial Drive connection are user initiated. Ad requests are made only when Google UMP indicates that ads may be requested; regional consent choices are respected where required.",
     s4_a_title: "A) COVER ART DOWNLOAD (BOX ARTS)",
     s4_a_p: "If enabled in Settings, the app queries public community repositories (such as <span class=\"font-mono text-[12px] bg-white border border-ibm-border px-1.5 py-0.5 rounded\">libretro-thumbnails</span> on GitHub) for cover art. The repository may receive network metadata, such as the device IP address, when the request is made. ROMs, saves and account details are not sent.",
     s4_b_title: "B) SUPPORT LINK AND ERROR REPORTING",
@@ -322,14 +335,14 @@ const translations = {
     s5_p2: "The developer does not sell personal data. AdMob and its partners process information under their own policies and the choices presented through UMP. The developer does not receive a user’s Advertising ID or personal ad profile.",
     s5_note: "The app includes an in-app privacy-options entry in Settings when Google UMP requires it.",
     s6_title: "Device permissions",
-    s6_intro: "RetroBoy uses permissions needed for emulator operation and advertising:",
+    s6_intro: "RetroBoy uses permissions needed for emulation, optional sync and advertising:",
     s6_vibrate: "Haptic feedback when pressing on-screen buttons.",
     s6_wakelock: "Keep screen on while playing.",
-    s6_internet: "Network access for cover-art downloads and AdMob requests. Google Play services may also use the advertising identifier for ads.",
+    s6_internet: "Network access for cover-art downloads, optional Google Drive sync and AdMob. Google Play services may also use the advertising identifier for ads.",
     s7_title: "Children’s privacy (COPPA / GDPR-K)",
     s7_p: "The Google Play audience declaration for RetroBoy is ages 13 and older. Ad requests apply a teen-directed treatment and a maximum content rating of G. The app does not request precise location permission. Parents or guardians can contact the developer through the support contact on the Google Play listing with privacy questions.",
     s8_title: "Information security",
-    s8_p: "As all game data, settings and saves remain exclusively on the device’s local storage, their confidentiality and integrity are protected by Android’s isolation, encryption and access-control mechanisms. There is no transmission to or custody on developer servers; therefore centralized breach notification (Art. 33-34 GDPR) does not apply beyond the security of the user’s own device.",
+    s8_p: "Android isolates the app’s local files and controls access to selected documents and folders. Drive requests use HTTPS and are authorized by Google Play services. Saves are sent directly to Google rather than to a developer-operated server. Save integrity checks and recovery history help detect damaged archives and preserve progress when restoring; users should also keep independent backups.",
     s9_title: "Changes to this privacy policy",
     s9_p: "We may update this Policy to reflect functional improvements or regulatory adjustments. Any modification will be published on this same page with its effective date. The date shown in the header (“Last updated”) determines the applicable version. Continued use of the App after publication implies acceptance of the current version.",
     s10_title: "Contact and user rights",
@@ -337,7 +350,13 @@ const translations = {
     s10_box_kicker: "CONTROLLER",
     s10_box_name: "RetroBoy Developer",
     s10_box_meta: "Package: com.retroboy.emulator · Distributed exclusively via Google Play",
-    footer_copy: "© 2026 RetroBoy (Emulator)."
+    footer_copy: "© 2026 RetroBoy (Emulator).",
+    index_sync: "4a. Optional Google Drive sync",
+    sync_title: "Optional Google Drive sync and backup retention",
+    sync_p1: "From version 1.0.7, you can optionally connect Google Drive to sync battery saves (.sav). RetroBoy requests only <code>https://www.googleapis.com/auth/drive.appdata</code>, which permits access to its private application data space, without general access to your other Drive files. This space is managed through Google Drive’s app settings and is not a normal visible folder. No developer-operated server receives these saves.",
+    sync_p2: "The app sends battery saves and metadata needed to identify games, verify integrity and handle revisions: an identifier derived from game content, save digest, revision relationships, date and device model. Google also receives the network information needed to serve requests. ROMs and quick states are not uploaded by automatic sync. Your selected account and sync ledger remain in private local app data. These save data are not used for advertising or sold.",
+    sync_p3: "Earlier cloud revisions are retained for recovery and are not automatically deleted in this version; they use storage associated with your Google Account. Disconnecting Drive stops sync and requests revocation of access, but does not delete local or cloud saves. You can remove authorization through your Google Account controls and delete the app’s hidden data through Google Drive settings. External backups remain until you remove them from the chosen provider.",
+    sync_p4: "Imports and restores preserve previous local progress in recovery history within RetroBoy’s private app storage. Clearing app data or uninstalling removes this local history. Sync depends on connectivity, authorization, available storage and Android scheduling; check its status before switching devices. See <a href=\"https://policies.google.com/privacy\" rel=\"noopener\" target=\"_blank\">Google’s Privacy Policy</a> for Google’s handling of data.",
   },
   es: {
     index_purchase: "5a. Compra opcional sin anuncios",
@@ -347,14 +366,14 @@ const translations = {
     purchase_p3: "Puedes restaurar la compra con la misma cuenta de Google Play desde el menú o Ajustes. Una devolución o revocación puede desactivar la eliminación de anuncios cuando la app compruebe de nuevo el estado en Google Play. Borrar los datos de la app elimina el comprobante local, pero no cancela ni reembolsa la compra en Google Play. Consulta la <a href=\"https://policies.google.com/privacy\" rel=\"noopener\" target=\"_blank\">política de privacidad de Google</a> para conocer cómo trata Google los datos de pago.",
 
     title: "Política de Privacidad — RetroBoy (Emulador)",
-    description: "Política de Privacidad de RetroBoy (Emulador), con información sobre datos locales del juego y datos que trata Google AdMob para publicidad. Actualizada el 17 de octubre de 2026.",
+    description: "Política de privacidad de RetroBoy: partidas locales, sincronización opcional con Google Drive, copias externas y publicidad de Google AdMob. Actualizada el 18 de octubre de 2026.",
     aria_lang: "Idioma",
     hero_badge: "POLÍTICA DE PRIVACIDAD · RETROBOY",
     hero_h1: "Política de Privacidad —<br><span class=\"text-ibm-blue\">RetroBoy (Emulador)</span>",
     hero_pkg: "Paquete: com.retroboy.emulator",
-    hero_updated: "Última actualización: 17 de octubre de 2026",
-    hero_zero: "DATOS DE JUEGO LOCALES",
-    hero_p: "Esta política describe la información que trata <strong>RetroBoy</strong>. Los juegos, partidas y ajustes permanecen en tu dispositivo. La app también usa Google AdMob para solicitar anuncios y puede tratar datos del dispositivo y de publicidad, como se explica abajo.",
+    hero_updated: "Última actualización: 18 de octubre de 2026",
+    hero_zero: "PARTIDAS LOCALES · SINCRONIZACIÓN OPCIONAL",
+    hero_p: "Esta política describe la información que trata <strong>RetroBoy</strong>. Los juegos y partidas se guardan en tu dispositivo. Puedes conectar voluntariamente Google Drive para sincronizar partidas normales o elegir una carpeta externa para copias. Google AdMob puede tratar datos del dispositivo y de publicidad cuando se solicitan anuncios.",
     index_title: "ÍNDICE",
     index_s1: "1. Información general y responsable",
     index_s2: "2. Recopilación y tratamiento",
@@ -371,17 +390,17 @@ const translations = {
     s1_box_title: "INFORMACIÓN DE LA APLICACIÓN",
     s1_pkg: "Paquete: <span class=\"text-[#262D35] font-medium\">com.retroboy.emulator</span>",
     s2_title: "Recopilación y tratamiento de datos personales",
-    s2_intro: "Los juegos, partidas y ajustes se procesan localmente. Cuando se solicitan anuncios, Google AdMob puede tratar datos personales y del dispositivo, como un identificador publicitario o del dispositivo, ubicación aproximada inferida de la dirección IP, interacciones con anuncios y diagnósticos.",
-    s2_li1: "<strong>DATOS LOCALES DEL EMULADOR:</strong> Las ROMs, partidas, estados guardados y ajustes permanecen en el almacenamiento local del dispositivo; RetroBoy no los sube. No se requiere cuenta, nombre, correo electrónico ni datos de pago para usar el emulador.",
-    s2_li2: "<strong>SIN CREACIÓN DE CUENTAS:</strong> No se requiere registro, inicio de sesión ni creación de perfiles para utilizar todas las funciones del emulador.",
+    s2_intro: "Los juegos, partidas y ajustes se procesan localmente. Si activas la sincronización con Google Drive, las partidas normales y los metadatos de sus versiones se envían directamente a tu cuenta de Google. Cuando se solicitan anuncios, Google AdMob puede tratar identificadores publicitarios o del dispositivo, ubicación aproximada inferida de la IP, interacciones publicitarias y diagnósticos.",
+    s2_li1: "<strong>DATOS DEL EMULADOR:</strong> Las ROMs y los ajustes permanecen en el dispositivo. Solo se suben partidas normales si conectas Google Drive; los estados rápidos se incluyen únicamente en exportaciones manuales. RetroBoy nunca sube las ROMs.",
+    s2_li2: "<strong>CUENTA DE GOOGLE OPCIONAL:</strong> No necesitas cuenta para jugar localmente. La sincronización con Drive requiere elegir y autorizar una cuenta de Google. RetroBoy conserva localmente la cuenta elegida y utiliza Google Play services para autorizar el acceso; no guarda tu contraseña de Google.",
     s2_li3: "<strong>DATOS PARA PUBLICIDAD:</strong> Google AdMob puede recopilar y compartir identificadores publicitarios, ubicación aproximada, interacciones con anuncios y diagnósticos con Google y sus socios publicitarios para mostrar y medir anuncios, analizar resultados y prevenir fraude. El desarrollador no recibe los perfiles publicitarios de los usuarios.",
-    s2_summary: "<strong>En resumen:</strong> Los archivos y ajustes del emulador permanecen en el dispositivo. Google AdMob gestiona las solicitudes publicitarias y puede usar ubicación aproximada derivada de la red e identificadores publicitarios. RetroBoy no crea cuentas.",
+    s2_summary: "El progreso permanece local salvo que actives Drive o lo exportes. La sincronización se comunica directamente con Google, sin un servidor del desarrollador. Google AdMob gestiona por separado las solicitudes publicitarias.",
     s3_title: "Acceso a archivos locales (ROMs y partidas guardadas)",
     s3_li1: "La Aplicación requiere acceso de lectura y escritura únicamente sobre los archivos y carpetas que el usuario seleccione voluntariamente a través del selector oficial y seguro de Android (<strong>Storage Access Framework / SAF</strong>).",
-    s3_li2: "Los archivos de juegos (ROMs con extensiones <code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">.gb</code> <code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">.gbc</code> <code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">.gba</code> <code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">.zip</code>), las partidas guardadas (<code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">.sav</code> <code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">.srm</code>) y los estados de guardado rápido (Save States) se procesan y almacenan <strong>EXCLUSIVAMENTE de forma local</strong> en la memoria de su dispositivo.",
-    s3_li3: "En ningún momento se cargan, copian o transmiten sus archivos ROMs ni sus partidas a servidores externos. El usuario es el único responsable de disponer de copia legal de los títulos que importe.",
+    s3_li2: "Las ROMs (.gb, .gbc, .gba y archivos comprimidos compatibles), las partidas normales (.sav) y los estados rápidos se guardan localmente. Puedes exportar e importar partidas y estados rápidos compatibles como archivos ZIP. Si eliges una carpeta externa, RetroBoy escribe automáticamente copias ZIP versionadas de las partidas normales; no importa automáticamente los cambios de esa carpeta.",
+    s3_li3: "RetroBoy nunca sube las ROMs. La sincronización con Google Drive, si la activas, sube las partidas normales según se explica abajo. El proveedor de una carpeta externa puede subir las copias seleccionadas conforme a sus ajustes y políticas. El usuario debe disponer de una copia legal de los títulos importados.",
     s4_title: "Conectividad a internet y servicios de terceros",
-    s4_intro: "La Aplicación usa el permiso de red (<code class=\"bg-ibm-gray border border-ibm-border px-1.5 py-0.5 rounded font-mono text-[12px]\">INTERNET</code>) para descargar carátulas opcionales y solicitar anuncios mediante Google AdMob. El usuario inicia las descargas de carátulas. Las solicitudes de anuncios solo se hacen cuando la Plataforma de Mensajería de Usuarios (UMP) de Google indica que se pueden solicitar; se respetan las opciones regionales de consentimiento cuando son obligatorias.",
+    s4_intro: "La app utiliza INTERNET para descargar carátulas opcionales, sincronizar con Google Drive y solicitar anuncios a Google AdMob. El usuario inicia la descarga de carátulas y la conexión inicial de Drive. Los anuncios solo se solicitan cuando Google UMP lo permite; se respetan las opciones regionales de consentimiento cuando corresponda.",
     s4_a_title: "A) DESCARGA DE CARÁTULAS (BOX ARTS)",
     s4_a_p: "Si se activa en Ajustes, la app consulta repositorios públicos de la comunidad (como <span class=\"font-mono text-[12px] bg-white border border-ibm-border px-1.5 py-0.5 rounded\">libretro-thumbnails</span> en GitHub) para obtener carátulas. El repositorio puede recibir metadatos de red, como la dirección IP del dispositivo, cuando se hace la solicitud. No se envían ROMs, partidas ni datos de cuenta.",
     s4_b_title: "B) ENLACE DE SOPORTE Y REPORTE DE ERRORES",
@@ -391,14 +410,14 @@ const translations = {
     s5_p2: "El desarrollador no vende datos personales. AdMob y sus socios tratan información conforme a sus propias políticas y a las opciones presentadas mediante UMP. El desarrollador no recibe el ID publicitario ni el perfil de anuncios de cada usuario.",
     s5_note: "La app muestra una opción de privacidad dentro de Ajustes cuando Google UMP la requiere.",
     s6_title: "Permisos del dispositivo",
-    s6_intro: "RetroBoy usa los permisos necesarios para el emulador y la publicidad:",
+    s6_intro: "RetroBoy utiliza los permisos necesarios para emulación, sincronización opcional y publicidad:",
     s6_vibrate: "Vibración háptica al presionar botones táctiles en pantalla.",
     s6_wakelock: "Mantener pantalla encendida mientras se juega.",
-    s6_internet: "Acceso a la red para descargar carátulas y solicitar anuncios a AdMob. Google Play services también puede usar el identificador publicitario para los anuncios.",
+    s6_internet: "Acceso a la red para carátulas, sincronización opcional con Google Drive y AdMob. Google Play services también puede usar el identificador publicitario para anuncios.",
     s7_title: "Privacidad de los menores (COPPA / GDPR-K)",
     s7_p: "La audiencia declarada de RetroBoy en Google Play es de 13 años en adelante. Las solicitudes de anuncios aplican el tratamiento para adolescentes y una clasificación máxima de contenido G. La app no solicita permiso para ubicación precisa. Los padres o tutores pueden contactar al desarrollador mediante el contacto de soporte de la ficha de Google Play si tienen preguntas sobre privacidad.",
     s8_title: "Seguridad de la información",
-    s8_p: "Dado que todos los datos de juego, configuraciones y partidas permanecen exclusivamente en el almacenamiento local del dispositivo, su confidencialidad e integridad quedan amparadas por los mecanismos de aislamiento, cifrado y control de acceso del propio sistema operativo Android. No existe transmisión ni custodia en servidores del desarrollador; por tanto, no aplica notificación de brechas centralizadas (art. 33-34 RGPD) más allá de la seguridad del dispositivo del usuario.",
+    s8_p: "Android aísla los archivos locales de la app y controla el acceso a los documentos y carpetas seleccionados. Las solicitudes a Drive utilizan HTTPS y la autorización de Google Play services. Las partidas se envían directamente a Google, sin un servidor del desarrollador. La comprobación de integridad y el historial de recuperación ayudan a detectar archivos dañados y conservar el progreso al restaurar; conviene mantener también copias independientes.",
     s9_title: "Cambios en esta política de privacidad",
     s9_p: "Podemos actualizar esta Política para reflejar mejoras funcionales o adaptaciones normativas. Toda modificación se publicará en esta misma página con su fecha de vigencia. La fecha indicada en el encabezado (“Última actualización”) determina la versión aplicable. El uso continuado de la Aplicación tras la publicación implica la aceptación de la versión vigente.",
     s10_title: "Contacto y derechos del usuario",
@@ -406,7 +425,13 @@ const translations = {
     s10_box_kicker: "RESPONSABLE",
     s10_box_name: "Desarrollador de RetroBoy",
     s10_box_meta: "Paquete: com.retroboy.emulator · Distribución exclusiva vía Google Play",
-    footer_copy: "© 2026 RetroBoy (Emulador)."
+    footer_copy: "© 2026 RetroBoy (Emulador).",
+    index_sync: "4a. Sincronización opcional con Drive",
+    sync_title: "Sincronización opcional con Google Drive y conservación de copias",
+    sync_p1: "Desde la versión 1.0.7 puedes conectar voluntariamente Google Drive para sincronizar partidas normales (.sav). RetroBoy solicita únicamente <code>https://www.googleapis.com/auth/drive.appdata</code>, que permite acceder a su espacio privado de datos, sin acceso general a tus otros archivos de Drive. Ese espacio se administra mediante los ajustes de aplicaciones de Google Drive y no es una carpeta visible normal. Ningún servidor del desarrollador recibe las partidas.",
+    sync_p2: "La app envía las partidas normales y los metadatos necesarios para identificar juegos, verificar integridad y gestionar versiones: identificador derivado del contenido del juego, resumen de integridad, relaciones entre versiones, fecha y modelo del dispositivo. Google también recibe la información de red necesaria para atender las solicitudes. La sincronización automática no sube ROMs ni estados rápidos. La cuenta elegida y el registro de sincronización permanecen en los datos privados locales de la app. Los datos de las partidas no se usan para publicidad ni se venden.",
+    sync_p3: "Las versiones anteriores se conservan en la nube para recuperación y no se eliminan automáticamente en esta versión; ocupan almacenamiento asociado a tu cuenta de Google. Desconectar Drive detiene la sincronización y solicita revocar el acceso, pero no borra las partidas locales ni las copias en la nube. Puedes retirar la autorización en los controles de tu cuenta de Google y borrar los datos ocultos de la app en los ajustes de Google Drive. Las copias externas permanecen hasta que las elimines del proveedor elegido.",
+    sync_p4: "Las importaciones y restauraciones conservan el progreso local anterior en un historial dentro del almacenamiento privado de RetroBoy. Borrar los datos de la app o desinstalarla elimina ese historial local. La sincronización depende de conexión, autorización, almacenamiento y planificación de Android; consulta su estado antes de cambiar de dispositivo. Consulta la <a href=\"https://policies.google.com/privacy\" rel=\"noopener\" target=\"_blank\">política de privacidad de Google</a> para conocer su tratamiento de datos.",
   }
 };
 function setLang(lang){
